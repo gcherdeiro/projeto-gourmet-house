@@ -1,0 +1,12 @@
+@mixin titulo($tipo){
+    color: $corDestaque;
+    font-family: 'killthelights';
+    font-weight: normal;                    /* Retira o negrito */
+    margin: 0 0 5px 0;                      /* top right bottom left */
+
+    @if($tipo == "h1"){
+        font-size: 24px;
+    }@else if($tipo == "h2"){
+        font-size: 22px;
+    }
+}

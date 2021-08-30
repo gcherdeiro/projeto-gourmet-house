@@ -1,0 +1,173 @@
+@import "variaveis";
+@import "mixins";
+
+@font-face {
+    font-family: 'killthelights';
+    src: url(../KillTheLights.ttf);
+}
+
+body{
+    margin: 0;
+    background-color: #DDDDDD;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 24px;
+    @include titulo("h1");
+}
+
+h2{
+    font-size: 22px;
+    @include titulo("h2");
+}
+
+p{
+    color: $corPrimaria;
+
+}
+
+.topo{
+    background-image: linear-gradient($corDestaque, $corDestaqueDark);
+    text-align: center;
+    padding: 20px;
+}
+
+.menu{
+    margin-top: 20px;
+
+    a{
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+        margin-right: 25px;
+        font-family: 'killthelights';
+        text-transform: uppercase;
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+        &:active{
+            color: $corDestaque;
+        }
+
+    }
+
+}
+
+.banner{
+    img, video{
+        width: 100%;
+    }
+}
+
+.principal{
+    text-align: center;
+    margin: 35px 0;
+
+    img{
+        width: 100%;
+    }
+
+}
+
+.btn{
+    color: $corPrimaria;
+    text-decoration: none;
+    font-size: 14px;
+    border: solid 1px $corPrimaria;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.galeria{
+
+    a{
+        display: inline-block;        /* É necessário pois o link nativamente é elemento em linha entao nao daria margem para baixo */
+        margin: 5px;
+    }
+
+    img{
+        opacity: 0.5;
+        transition: 0,5s;
+        // filter: grayscale(100%);
+
+        &:hover{
+            opacity: 1;             /* Ao passar o mouse remove a transparência */
+            // filter: grayscale(0);   /* Filtro cinza, ao passar o imagem sai o filtro */
+            transform: scale(1.1);  /* Aumenta a imagem ao passar o mouse */
+        }
+
+    }
+
+}
+
+.separador{
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.bg{
+    background-color: #d2d2d2;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.rodape{
+    background-color: $corDestaqueDark;
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 991px) {
+    
+    .logo img{
+        width: 200px;
+    }
+
+    .menu{
+        display: none;
+
+        a{
+            display: block;
+            margin: 0;
+            padding: 20px 0;
+            border-bottom: dashed 1px $corPrimaria;
+        }
+    }
+
+    .btn-menu{
+        position: absolute;
+        right: 15px;
+        top: 35px;
+    }
+
+    .barra{
+        width: 40px;
+        height: 3px;
+        margin-bottom: 3px;
+        background-color: white;
+        transition: 0.5s;
+    }
+
+    // Formatação que só existe com a classe x
+
+    .x .barra:first-child{
+        transform: rotate(45deg) translate(4px, 4px);
+    }
+
+    .x .barra:nth-child(2){
+        opacity: 0;
+    }
+
+    .x .barra:last-child{
+        transform: rotate(-45deg) translate(4px, -5px);
+    }
+
+}

@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'killthelights';
+  src: url(../KillTheLights.ttf);
+}
+
+body {
+  margin: 0;
+  background-color: #DDDDDD;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  color: #8C0000;
+  font-family: 'killthelights';
+  font-weight: normal;
+  /* Retira o negrito */
+  margin: 0 0 5px 0;
+  /* top right bottom left */
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 22px;
+  color: #8C0000;
+  font-family: 'killthelights';
+  font-weight: normal;
+  /* Retira o negrito */
+  margin: 0 0 5px 0;
+  /* top right bottom left */
+  font-size: 22px;
+}
+
+p {
+  color: #888888;
+}
+
+.topo {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8C0000), to(#2B0101));
+  background-image: linear-gradient(#8C0000, #2B0101);
+  text-align: center;
+  padding: 20px;
+}
+
+.menu {
+  margin-top: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-family: 'killthelights';
+  text-transform: uppercase;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu a:active {
+  color: #8C0000;
+}
+
+.banner img, .banner video {
+  width: 100%;
+}
+
+.principal {
+  text-align: center;
+  margin: 35px 0;
+}
+
+.principal img {
+  width: 100%;
+}
+
+.btn {
+  color: #888888;
+  text-decoration: none;
+  font-size: 14px;
+  border: solid 1px #888888;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.galeria a {
+  display: inline-block;
+  /* É necessário pois o link nativamente é elemento em linha entao nao daria margem para baixo */
+  margin: 5px;
+}
+
+.galeria img {
+  opacity: 0.5;
+  -webkit-transition: 0,5s;
+  transition: 0,5s;
+}
+
+.galeria img:hover {
+  opacity: 1;
+  /* Ao passar o mouse remove a transparência */
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  /* Aumenta a imagem ao passar o mouse */
+}
+
+.separador {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.bg {
+  background-color: #d2d2d2;
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rodape {
+  background-color: #2B0101;
+  color: white;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 991px) {
+  .logo img {
+    width: 200px;
+  }
+  .menu {
+    display: none;
+  }
+  .menu a {
+    display: block;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: dashed 1px #888888;
+  }
+  .btn-menu {
+    position: absolute;
+    right: 15px;
+    top: 35px;
+  }
+  .barra {
+    width: 40px;
+    height: 3px;
+    margin-bottom: 3px;
+    background-color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .x .barra:first-child {
+    -webkit-transform: rotate(45deg) translate(4px, 4px);
+            transform: rotate(45deg) translate(4px, 4px);
+  }
+  .x .barra:nth-child(2) {
+    opacity: 0;
+  }
+  .x .barra:last-child {
+    -webkit-transform: rotate(-45deg) translate(4px, -5px);
+            transform: rotate(-45deg) translate(4px, -5px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
